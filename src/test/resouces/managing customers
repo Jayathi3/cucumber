@@ -1,0 +1,24 @@
+Feature Managing orders
+ Scenario:searching for orders
+   Given orders available in database
+   when I enter sales menu
+   And select orders
+   Then orders  window displayed
+
+   Scenario: To search for order with defined data
+     Given orders  window displayed
+     When I enter the following data in respective fields
+     Examples
+     |Start date|End date|billing email|order status |billing status|
+     Then  list of order matching the entered criteria will be displayed
+
+     Scenario: search for orders with Ids
+       Given orders  window displayed
+     When I enter the order  Ids
+       And click search
+       Then list of order matching the Ids will be displayed
+
+
+
+
+
